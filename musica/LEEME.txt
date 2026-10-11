@@ -1,0 +1,5 @@
+Coloca aqui la cancion favorita de Jannet con el nombre:
+
+    cancion.mp3
+
+Y cambia el titulo y artista en index.html (seccion "Mi cancion favorita").

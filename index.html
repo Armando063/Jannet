@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis XV Años · Jannet Reyes Hernández</title>
+  <meta name="description" content="Te invito a celebrar mis XV años · 3 de abril de 2027 · Los Pilares de Barberena">
+  <meta name="theme-color" content="#C9A9DD">
+
+  <!-- Vista previa al compartir por WhatsApp / Facebook -->
+  <meta property="og:title" content="Mis XV Años · Jannet">
+  <meta property="og:description" content="Sábado 3 de abril de 2027 · Los Pilares de Barberena">
+  <meta property="og:image" content="imagenes/portada.jpg">
+
+  <link rel="icon" href="iconos/corona.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="bloqueado">
+
+  <!-- ============ SOBRE DE BIENVENIDA ============ -->
+  <div class="sobre" id="sobre">
+    <div class="sobre__tarjeta">
+      <div class="sobre__sello">J</div>
+      <p class="sobre__titulo">Mis XV Años</p>
+      <h1 class="sobre__nombre">Jannet</h1>
+      <button class="btn" id="btnAbrir">
+        <img src="iconos/sobre.svg" alt=""> Abrir invitación
+      </button>
+    </div>
+  </div>
+
+  <div class="petalos" id="petalos" aria-hidden="true"></div>
+
+  <!-- Música de fondo: coloca la canción en musica/cancion.mp3 -->
+  <audio id="audio" src="musica/cancion.mp3" preload="auto" loop></audio>
+  <button class="musica-flotante" id="musicaFlotante" aria-label="Pausar o reproducir música">
+    <img src="iconos/nota-musical.svg" alt="">
+  </button>
+
+  <!-- ============ 1. PORTADA ============ -->
+  <header class="portada" id="inicio">
+    <div class="portada__foto" style="background-image:url('imagenes/portada.png')"></div>
+    <div class="portada__velo"></div>
+    <div class="portada__contenido">
+      <p class="portada__mis">Mis</p>
+      <p class="portada__xv">XV</p>
+      <p class="portada__mis">Años</p>
+      <h2 class="portada__nombre">Jannet Reyes Hernández</h2>
+      <p class="portada__mensaje">
+        Hay momentos que se viven una sola vez en la vida y quiero compartir este contigo.
+        Te invito a celebrar el inicio de una nueva etapa a mi lado.
+      </p>
+      <p class="portada__fecha">Sábado · 03 · Abril · 2027</p>
+
+      <div class="contador" id="contador" aria-live="polite">
+        <div class="contador__caja"><span class="contador__num" id="dias">00</span><span class="contador__txt">Días</span></div>
+        <div class="contador__caja"><span class="contador__num" id="horas">00</span><span class="contador__txt">Horas</span></div>
+        <div class="contador__caja"><span class="contador__num" id="minutos">00</span><span class="contador__txt">Min</span></div>
+        <div class="contador__caja"><span class="contador__num" id="segundos">00</span><span class="contador__txt">Seg</span></div>
+      </div>
+
+      <a href="#cancion" aria-label="Ver más"><img class="flecha-abajo" src="iconos/flecha-abajo.svg" alt=""></a>
+    </div>
+  </header>
+
+  <!-- ============ 2. CANCIÓN FAVORITA ============ -->
+  <section class="cancion" id="cancion">
+    <div class="contenedor">
+      <div class="encabezado revelar">
+        <img class="encabezado__icono" src="iconos/nota-musical.svg" alt="">
+        <h2>Mi canción favorita</h2>
+        <p>Dale play y acompáñame mientras recorres mi invitación</p>
+      </div>
+
+      <div class="reproductor revelar">
+        <div class="disco" id="disco"></div>
+        <p class="reproductor__frase">“La música dice lo que el corazón siente”</p>
+        <!-- ✏️ Cambia aquí el nombre de la canción y el artista -->
+        <p class="reproductor__titulo">Nombre de la canción</p>
+        <p class="reproductor__artista">Artista</p>
+
+        <div class="barra" id="barra"><div class="barra__progreso" id="progreso"></div></div>
+        <div class="tiempos"><span id="tActual">0:00</span><span id="tTotal">0:00</span></div>
+
+        <button class="btn-play" id="btnPlay" aria-label="Reproducir canción">
+          <svg id="icoPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="icoPausa" viewBox="0 0 24 24" style="display:none"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+        </button>
+        <div class="ondas" id="ondas"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. MENSAJE ESPECIAL ============ -->
+  <section class="mensaje" id="mensaje">
+    <div class="contenedor">
+      <div class="encabezado revelar">
+        <img class="encabezado__icono" src="iconos/corazon.svg" alt="">
+        <h2>Con todo mi corazón</h2>
+        <img class="ornamento" src="iconos/ornamento.svg" alt="">
+      </div>
+
+      <div class="mensaje__texto revelar">
+        <p>
+          Doy gracias a <strong>Dios</strong> por regalarme la vida, por guiar cada uno de mis pasos
+          y por permitirme llegar a este día tan soñado.
+        </p>
+        <p>
+          A <strong>mis papás</strong>, por su amor infinito, por sus desvelos, sus consejos y por
+          enseñarme con su ejemplo a nunca dejar de soñar. Todo lo que soy se lo debo a ustedes.
+        </p>
+        <p>
+          A <strong>mis abuelitos</strong>, por su ternura, sus bendiciones y por ser las raíces
+          que me sostienen. Su cariño es el tesoro más grande que tengo.
+        </p>
+        <p class="mensaje__firma">Jannet</p>
+      </div>
+
+      <div class="familia">
+        <article class="familia__tarjeta revelar">
+          <img src="iconos/corazon.svg" alt="">
+          <p class="familia__rol">Mis Papás</p>
+          <p class="familia__nombre">
+            Erick Iván Reyes Ceja
+            <span class="familia__y">&amp;</span>
+            Jessica Melina Hernández García
+          </p>
+        </article>
+        <article class="familia__tarjeta revelar">
+          <img src="iconos/corona.svg" alt="">
+          <p class="familia__rol">Mis Padrinos</p>
+          <p class="familia__nombre">
+            Teresa Reyes Rangel
+            <span class="familia__y">&amp;</span>
+            Brenda Fernanda Hernández García
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. ÁLBUM DE FOTOS ============ -->
+  <section class="album" id="album">
+    <div class="contenedor">
+      <div class="encabezado revelar">
+        <img class="encabezado__icono" src="iconos/camara.svg" alt="">
+        <h2>Mis recuerdos</h2>
+        <p>Toca cualquier foto para verla en grande</p>
+      </div>
+      <!-- Las fotos se generan desde js/main.js (lista FOTOS) -->
+      <div class="collage" id="collage"></div>
+    </div>
+  </section>
+
+  <div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Visor de fotos">
+    <span class="visor__contador" id="visorContador"></span>
+    <button class="visor__btn visor__cerrar" id="visorCerrar" aria-label="Cerrar">&times;</button>
+    <button class="visor__btn visor__ant" id="visorAnt" aria-label="Anterior">&#8249;</button>
+    <figure>
+      <img id="visorImg" src="" alt="">
+      <figcaption id="visorPie"></figcaption>
+    </figure>
+    <button class="visor__btn visor__sig" id="visorSig" aria-label="Siguiente">&#8250;</button>
+  </div>
+
+  <!-- ============ 5. ITINERARIO ============ -->
+  <section class="itinerario" id="itinerario">
+    <div class="contenedor">
+      <div class="encabezado revelar">
+        <img class="encabezado__icono" src="iconos/calendario.svg" alt="">
+        <h2>Itinerario</h2>
+        <p>Sábado 3 de abril de 2027</p>
+      </div>
+
+      <div class="linea">
+        <div class="evento revelar">
+          <div class="evento__punto"><img src="iconos/iglesia.svg" alt=""></div>
+          <div class="evento__tarjeta">
+            <p class="evento__hora">5:00 pm</p>
+            <h3 class="evento__titulo">Ceremonia de Bendición</h3>
+            <p class="evento__lugar">Los Pilares de Barberena</p>
+            <p class="evento__dir">Un momento para dar gracias a Dios</p>
+            <a class="btn btn--claro js-mapa" href="#" target="_blank" rel="noopener">
+              <img src="iconos/ubicacion.svg" alt=""> Ver ubicación
+            </a>
+          </div>
+        </div>
+
+        <div class="evento revelar">
+          <div class="evento__punto"><img src="iconos/copas.svg" alt=""></div>
+          <div class="evento__tarjeta">
+            <p class="evento__hora">7:00 pm</p>
+            <h3 class="evento__titulo">Recepción</h3>
+            <p class="evento__lugar">Los Pilares de Barberena</p>
+            <p class="evento__dir">¡A celebrar y bailar toda la noche!</p>
+            <a class="btn btn--claro js-mapa" href="#" target="_blank" rel="noopener">
+              <img src="iconos/ubicacion.svg" alt=""> Ver ubicación
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mapa revelar">
+        <iframe id="mapaIframe" title="Mapa Los Pilares de Barberena" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="acciones revelar">
+        <a class="btn js-mapa" href="#" target="_blank" rel="noopener"><img src="iconos/ubicacion.svg" alt=""> Abrir en Google Maps</a>
+        <a class="btn btn--claro" id="btnCalendario" href="#" target="_blank" rel="noopener"><img src="iconos/calendario.svg" alt=""> Agendar fecha</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. CÓDIGO DE VESTIMENTA ============ -->
+  <section class="vestimenta" id="vestimenta">
+    <div class="contenedor">
+      <div class="encabezado revelar">
+        <img class="encabezado__icono" src="iconos/vestido.svg" alt="">
+        <h2>Código de vestimenta</h2>
+      </div>
+      <div class="vestimenta__caja revelar">
+        <p class="vestimenta__tipo">Formal</p>
+        <div class="vestimenta__iconos">
+          <figure><img src="iconos/vestido.svg" alt=""><figcaption>Ellas</figcaption></figure>
+          <figure><img src="iconos/traje.svg" alt=""><figcaption>Ellos</figcaption></figure>
+        </div>
+        <div class="aviso">
+          <div class="aviso__muestra" aria-hidden="true"></div>
+          <p>
+            Con mucho cariño te pedimos <strong>evitar el color lila</strong> y sus tonos similares,
+            ya que están reservados para la quinceañera. ¡Gracias por ayudarnos a que Jannet brille en su gran día!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. MESA DE REGALOS ============ -->
+  <section class="regalos" id="regalos">
+    <div class="contenedor">
+      <div class="encabezado revelar">
+        <img class="encabezado__icono" src="iconos/regalo.svg" alt="">
+        <h2>Mesa de regalos</h2>
+      </div>
+      <div class="regalos__caja revelar">
+        <img class="regalos__sobre" src="iconos/sobre.svg" alt="">
+        <p class="regalos__texto">
+          Tu presencia es el regalo más valioso para mí. Pero si deseas tener un detalle conmigo,
+          la mesa de regalos será una:
+        </p>
+        <p class="regalos__destacado">Lluvia de sobres</p>
+        <p class="regalos__texto" style="margin-top:18px;font-size:1.1rem;opacity:.8">
+          El día del evento habrá un buzón especial para recibirlos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. CONFIRMAR ASISTENCIA ============ -->
+  <section class="rsvp" id="rsvp">
+    <div class="contenedor">
+      <div class="encabezado revelar">
+        <img class="encabezado__icono" src="iconos/whatsapp.svg" alt="">
+        <h2>Confirma tu asistencia</h2>
+        <p>Será un honor contar contigo. Por favor confírmanos antes del 15 de marzo de 2027.</p>
+      </div>
+
+      <form class="formulario revelar" id="formRsvp" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+        </div>
+        <div class="campo">
+          <label>¿Nos acompañas?</label>
+          <div class="opciones">
+            <input type="radio" name="asiste" id="asisteSi" value="si" checked>
+            <label for="asisteSi">¡Sí, ahí estaré!</label>
+            <input type="radio" name="asiste" id="asisteNo" value="no">
+            <label for="asisteNo">No podré asistir</label>
+          </div>
+        </div>
+        <div class="campo" id="campoPersonas">
+          <label for="personas">Número de personas</label>
+          <select id="personas">
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="mensajeRsvp">Mensaje para Jannet (opcional)</label>
+          <textarea id="mensajeRsvp" rows="3" placeholder="Escribe unas palabras bonitas..."></textarea>
+        </div>
+        <button class="btn btn--wa" type="submit"><img src="iconos/whatsapp.svg" alt=""> Confirmar por WhatsApp</button>
+        <p class="rsvp__nota">Se abrirá WhatsApp con tu mensaje listo para enviar.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="pie">
+    <p class="pie__nombre">Jannet</p>
+    <p>¡Te espero! · 03.04.2027</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
