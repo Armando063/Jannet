@@ -38,8 +38,12 @@ a { color: inherit; }
 .sobre {
   position: fixed; inset: 0; z-index: 100;
   display: grid; place-items: center;
-  background: radial-gradient(circle at 50% 40%, #F3EAF9 0%, #D9C4EA 55%, #B996D2 100%);
+  /* background: radial-gradient(circle at 50% 40%, #F3EAF9 0%, #D9C4EA 55%, #B996D2 100%); */
   transition: opacity 1s ease, visibility 1s ease;
+  background-image: url('../imagenes/fondo1.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .sobre.abierto { opacity: 0; visibility: hidden; }
 .sobre__tarjeta {
@@ -114,10 +118,17 @@ section { position: relative; padding: 100px 20px; }
   background: linear-gradient(180deg, rgba(63,42,82,.15) 0%, rgba(63,42,82,.25) 40%, rgba(63,42,82,.88) 100%);
 }
 @keyframes zoomSuave { to { transform: scale(1); } }
-.portada__contenido { position: relative; z-index: 2; padding: 0 20px 70px; width: 100%; max-width: 760px; }
+.portada__contenido { position: relative; z-index: 2; 
+  /* padding: 0 20px 70px;  */
+  padding: 0 20px 0; 
+  width: 100%; max-width: 760px; }
 .portada__mis { font-family: var(--f-serif); letter-spacing: .5em; text-transform: uppercase; font-size: 1rem; }
 .portada__xv { font-family: var(--f-serif); font-size: clamp(4.5rem, 16vw, 7.5rem); font-weight: 300; line-height: .9; letter-spacing: .05em; }
-.portada__nombre { font-family: var(--f-script); font-size: clamp(3.4rem, 12vw, 6rem); line-height: 1.1; text-shadow: 0 4px 22px rgba(0,0,0,.35); }
+.portada__nombre { 
+  font-family: var(--f-script); 
+  /* font-size: clamp(3.4rem, 12vw, 6rem);  */
+  font-size: clamp(1rem, 12vw, 2rem); 
+  line-height: 1.1; text-shadow: 0 4px 22px rgba(0,0,0,.35); }
 .portada__mensaje { font-family: var(--f-serif); font-size: 1.25rem; font-style: italic; margin: 10px auto 26px; max-width: 520px; opacity: .95; }
 .portada__fecha { font-family: var(--f-serif); font-size: 1.15rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: 20px; }
 
@@ -135,7 +146,10 @@ section { position: relative; padding: 100px 20px; }
 @keyframes rebote { 50% { transform: translateY(8px); } }
 
 /* ---------- 2. Canción ---------- */
-.cancion { background: linear-gradient(180deg, var(--lavanda-claro), var(--lavanda)); }
+.cancion { 
+  background: linear-gradient(180deg, var(--lavanda-claro), var(--lavanda));  */
+  
+}
 .reproductor {
   max-width: 520px; margin: 0 auto; text-align: center;
   background: var(--perla); border-radius: var(--radio); padding: 40px 28px; box-shadow: var(--sombra);
@@ -187,7 +201,14 @@ section { position: relative; padding: 100px 20px; }
 .musica-flotante.sonando img { animation: girar 3s linear infinite; }
 
 /* ---------- 3. Mensaje especial ---------- */
-.mensaje { background: var(--perla); }
+.mensaje { 
+  /* background: var(--perla);  */
+  background-image: url('../imagenes/fondo3.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
+}
 .mensaje__texto {
   max-width: 720px; margin: 0 auto 60px; text-align: center;
   font-family: var(--f-serif); font-size: clamp(1.2rem, 2.6vw, 1.45rem); line-height: 1.8; color: var(--ciruela-osc);
@@ -212,7 +233,13 @@ section { position: relative; padding: 100px 20px; }
 .familia__y { font-family: var(--f-serif); font-style: italic; color: var(--lila-medio); font-size: 1.2rem; display: block; margin: 2px 0; }
 
 /* ---------- 4. Álbum ---------- */
-.album { background: linear-gradient(180deg, var(--lavanda) 0%, var(--lavanda-claro) 100%); }
+.album { 
+  background: linear-gradient(180deg, var(--lavanda) 0%, var(--lavanda-claro) 100%); 
+  /* background-image: url('../imagenes/fondo2.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; */
+}
 .collage { columns: 3 220px; column-gap: 14px; }
 .collage__item {
   break-inside: avoid; margin-bottom: 14px; position: relative; cursor: zoom-in;
@@ -247,7 +274,13 @@ section { position: relative; padding: 100px 20px; }
 .visor__contador { position: absolute; top: 28px; left: 50%; transform: translateX(-50%); color: #fff; font-size: .8rem; letter-spacing: .2em; opacity: .8; }
 
 /* ---------- 5. Itinerario ---------- */
-.itinerario { background: var(--perla); }
+.itinerario { 
+  /* background: var(--perla);  */
+  background-image: url('../imagenes/fondo3.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 .linea { position: relative; max-width: 760px; margin: 0 auto; }
 .linea::before {
   content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; transform: translateX(-50%);
@@ -302,7 +335,13 @@ section { position: relative; padding: 100px 20px; }
 .aviso strong { color: var(--ciruela); }
 
 /* ---------- 7. Mesa de regalos ---------- */
-.regalos { background: var(--perla); }
+.regalos { 
+  /* background: var(--perla);  */
+  background-image: url('../imagenes/fondo3.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 .regalos__caja { max-width: 640px; margin: 0 auto; text-align: center; }
 .regalos__sobre { width: 160px; margin: 0 auto 24px; animation: flotar 4s ease-in-out infinite; }
 .regalos__texto { font-family: var(--f-serif); font-size: 1.35rem; line-height: 1.8; }
