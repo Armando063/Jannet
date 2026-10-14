@@ -171,7 +171,7 @@ $('#formRsvp').addEventListener('submit', (e) => {
   const extra = $('#mensajeRsvp').value.trim();
 
   let texto = asiste
-    ? `¡Hola! 💜 Soy *${nombre}* y confirmo mi asistencia a los XV años de Jannet.\nAsistiremos: *${$('#personas').value}* persona(s).`
+    ? `¡Hola! 💜 Soy *${nombre}* y confirmo mi asistencia a los XV años de Jannet.`
     : `¡Hola! Soy *${nombre}*. Lamentablemente no podré asistir a los XV años de Jannet, pero le deseo un día maravilloso. 💜`;
   if (extra) texto += `\n\nMensaje para Jannet: ${extra}`;
 

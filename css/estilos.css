@@ -93,8 +93,19 @@ a { color: inherit; }
 }
 
 /* ---------- Estructura general ---------- */
-section { position: relative; padding: 100px 20px; }
-.contenedor { max-width: 1040px; margin: 0 auto; }
+section { 
+  position: relative; 
+  padding: 100px 20px; 
+}
+.contenedor-blanco { 
+  background-color: rgba(255, 255, 255, 0.6);
+  font-weight: bold;
+  border-radius: 5px;
+}
+.contenedor { 
+  max-width: 1040px; 
+  margin: 0 auto; 
+}
 .encabezado { text-align: center; margin-bottom: 52px; }
 .encabezado__icono { width: 54px; height: 54px; margin: 0 auto 10px; opacity: .9; }
 .encabezado h2 { font-family: var(--f-script); font-weight: 400; font-size: clamp(2.8rem, 7vw, 4rem); color: var(--ciruela); line-height: 1.1; }
@@ -117,6 +128,10 @@ section { position: relative; padding: 100px 20px; }
   position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(63,42,82,.15) 0%, rgba(63,42,82,.25) 40%, rgba(63,42,82,.88) 100%);
 }
+
+.portada__velo_portada {
+  background: linear-gradient(180deg, rgba(63,42,82,.15) 50%, rgba(63,42,82,.25) 95%, rgba(63,42,82,.88) 100%);
+}
 @keyframes zoomSuave { to { transform: scale(1); } }
 .portada__contenido { position: relative; z-index: 2; 
   /* padding: 0 20px 70px;  */
@@ -126,8 +141,7 @@ section { position: relative; padding: 100px 20px; }
 .portada__xv { font-family: var(--f-serif); font-size: clamp(4.5rem, 16vw, 7.5rem); font-weight: 300; line-height: .9; letter-spacing: .05em; }
 .portada__nombre { 
   font-family: var(--f-script); 
-  /* font-size: clamp(3.4rem, 12vw, 6rem);  */
-  font-size: clamp(1rem, 12vw, 2rem); 
+  font-size: clamp(3.4rem, 12vw, 6rem);
   line-height: 1.1; text-shadow: 0 4px 22px rgba(0,0,0,.35); }
 .portada__mensaje { font-family: var(--f-serif); font-size: 1.25rem; font-style: italic; margin: 10px auto 26px; max-width: 520px; opacity: .95; }
 .portada__fecha { font-family: var(--f-serif); font-size: 1.15rem; letter-spacing: .3em; text-transform: uppercase; margin-bottom: 20px; }
@@ -147,7 +161,7 @@ section { position: relative; padding: 100px 20px; }
 
 /* ---------- 2. Canción ---------- */
 .cancion { 
-  background: linear-gradient(180deg, var(--lavanda-claro), var(--lavanda));  */
+  background: linear-gradient(180deg, var(--lavanda-claro), var(--lavanda));
   
 }
 .reproductor {
